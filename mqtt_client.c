@@ -1,10 +1,3 @@
-/* AULA IoT - Ricardo Prates - 001 - Cliente MQTT - Publisher:/Temperatura; Subscribed:/led
- * Adaptado por Davi Leao para controle de LEDs RGB (pinos 11, 12, 13), dois buzzers (pinos 10, 21) com melodia de Parabéns
- * e joystick (eixo X em GPIO 27, eixo Y em GPIO 26) como sensor de presença
- * Material de suporte - 04/06/2025
- * Código adaptado de: https://github.com/raspberrypi/pico-examples/tree/master/pico_w/wifi/mqtt
- */
-
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 #include "pico/unique_id.h"
@@ -18,11 +11,11 @@
 #include "lwip/altcp_tls.h"
 
 // Definições
-#define WIFI_SSID "ABRAAO-10-2G"
-#define WIFI_PASSWORD "rosana5478"
-#define MQTT_SERVER "192.168.0.11"
-#define MQTT_USERNAME "davi"
-#define MQTT_PASSWORD "davi"
+#define WIFI_SSID "SSID"
+#define WIFI_PASSWORD "SENHA"
+#define MQTT_SERVER "BROKER_MQTT"
+#define MQTT_USERNAME "USER"
+#define MQTT_PASSWORD "PASSWORD"
 #define TEMPERATURE_UNITS 'C'
 #define MQTT_TOPIC_LEN 100
 
