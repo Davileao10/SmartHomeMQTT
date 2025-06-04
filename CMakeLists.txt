@@ -34,8 +34,7 @@ project(mqtt_client C CXX ASM)
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
-
-add_executable(mqtt_client mqtt_client.c )
+add_executable(mqtt_client mqtt_client.c)
 
 pico_set_program_name(mqtt_client "mqtt_client")
 pico_set_program_version(mqtt_client "0.1")
@@ -48,21 +47,19 @@ pico_enable_stdio_usb(mqtt_client 1)
 target_link_libraries(mqtt_client
     pico_stdlib
     hardware_adc
+    hardware_pwm  # Adicionado para LEDs RGB
     pico_cyw43_arch_lwip_threadsafe_background
     pico_lwip_mqtt
     pico_mbedtls
     pico_lwip_mbedtls
-    )
+)
 
 # Add the standard include files to the build
 target_include_directories(mqtt_client PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(mqtt_client 
-        
-        )
+target_link_libraries(mqtt_client)
 
 pico_add_extra_outputs(mqtt_client)
-

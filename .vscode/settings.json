@@ -37,10 +37,6 @@
     "raspberry-pi-pico.cmakePath": "${HOME}/.pico-sdk/cmake/v3.31.5/bin/cmake",
     "raspberry-pi-pico.ninjaPath": "${HOME}/.pico-sdk/ninja/v1.12.1/ninja",
     "files.associations": {
-        "*.dbclient-js": "javascript",
-        "cyw43_arch.h": "c",
-        "mqtt_priv.h": "c",
-        "dns.h": "c",
-        "altcp_tls.h": "c"
+        "gpio.h": "c"
     }
 }
